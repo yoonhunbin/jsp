@@ -33,11 +33,11 @@
 <body>
 <h2> 검색할 단어를 입력하세요.</h2>
 
-<from method="get" action="sendredirect.jsp">
+<form method="get" action="abc1.jsp">
 	검색 키워드: <input type="text" name="word">
 	<input type="submit" value="보내기">
 	<input type="reset" value="취소">
-</from>
+</form>
 
 </body>
 </html>
