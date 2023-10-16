@@ -1,4 +1,4 @@
-<h1>jsp연습.1</h1>
+<h1>jsp</h1>
 
 ```
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -11,10 +11,34 @@
 </head>
 <body>
 
-
-
-
-
+<%
+	String URL = "http://search.naver.com/search.naver?where=nexearch";
+	String keyword = request.getParameter("word");
+	URL += "&" + "query=" + keyword;
+	response.sendRedirect(URL);
+%>
 
 </body>
 </html>
+```
+<h2>html</h2>
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> 검색할 단어를 입력하세요.</h2>
+
+<from method="get" action="sendredirect.jsp">
+	검색 키워드: <input type="text" name="word">
+	<input type="submit" value="보내기">
+	<input type="reset" value="취소">
+</from>
+
+</body>
+</html>
+```
